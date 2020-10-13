@@ -1,0 +1,1 @@
+Script to remove all non-active branches from the local Git repository

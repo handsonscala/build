@@ -1,0 +1,23 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box width=0 height=0]
+  subgraph cluster_0 {
+    style="dashed"
+    label = "Main Process";
+    "os.watch"
+    {rank=same
+    "SyncActor"
+    "HashActor"
+    }
+  }
+  subgraph cluster_1 {
+    style="dashed"
+    label = "Sub Process";
+    "Agent"
+  }
+  "os.watch" -> "SyncActor" [label="1. ChangedPath"]
+  "SyncActor" -> "Agent" [label="2. StatPath"]
+  "Agent" -> "HashActor" [label="3. StatInfo"]
+  "HashActor" -> "SyncActor" [label="4. StatAndHashInfo                              "]
+  "SyncActor" -> "Agent" [label="5. WriteOver"]
+}

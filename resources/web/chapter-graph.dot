@@ -1,0 +1,56 @@
+digraph G {
+  node [shape=box width=0 height=0]
+  ranksep=0.15
+  subgraph cluster_1{
+  label="Part I: Introduction to Scala"
+
+  p1 [label="Chapter 1: Hands-on Scala\l\lChapter 2: Setting Up\l\lChapter 3: Basic Scala\l\lChapter 4: Scala Collections\l\lChapter 5: Notable Scala Features\l", shape="plaintext"]
+
+  }
+  subgraph cluster_2{
+  style="dashed"
+  label="Part II: Local Development"
+  6 [label="Chapter 6\nImplementing Algorithms in Scala"]
+  7 [label="Chapter 7\nFiles and Subprocesses"]
+  {rank=max
+  8 [label="Chapter 8\nJSON and Binary Data Serialization"]
+  }
+  9 [label="Chapter 9\nSelf-Contained Scala Scripts"]
+  10 [label="Chapter 10\nStatic Build Pipelines"]
+  }
+  subgraph cluster_3{
+  style="dashed"
+  label="Part III: Web Services"
+  {
+
+  11 [label="Chapter 11\nScraping Websites"]
+  12 [label="Chapter 12\nWorking with\nHTTP APIs"]
+  13 [label="Chapter 13\nFork-Join\nParallelism\nwith Futures"]
+  14 [label="Chapter 14\nSimple Web and\nAPI Servers"]
+  15 [label="Chapter 15\nQuerying SQL\nDatabases"]
+  }}
+  subgraph cluster_4{
+  style="dashed"
+  label="Part IV: Program Design"
+  {
+
+  16 [label="Chapter 16\n Message-based \nParallelism\nwith Actors"]
+  17 [label="Chapter 17\nMulti-Process\nApplications"]
+  18 [label="Chapter 18\nBuilding a Real-time\nFile Synchronizer"]
+  19 [label="Chapter 19\nParsing\nStructured Text"]
+  20 [label="Chapter 20\nImplementing a\nProgramming\nLanguage"]
+  }}
+
+
+  p1 -> 6 -> 7 -> 8
+  7 -> 9 -> 10
+
+
+  6 -> 11
+  8 -> 12 -> 13
+  8 -> 14 -> 15
+
+8 -> 16 -> 17 -> 18
+
+6 -> 19 -> 20
+}

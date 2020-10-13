@@ -1,0 +1,12 @@
+digraph G{
+  rankdir=LR;
+  node [shape=box width=0 height=0]
+  "myList" [shape=plaintext]
+  "myOtherList" [shape=plaintext]
+  "myThirdList" [shape=plaintext]
+  "myTail" [shape=plaintext]
+  myList -> 1 -> 2 -> 3 -> 4 -> 5 -> Nil
+  myTail -> 2
+  myOtherList -> 0 -> 1
+  myThirdList -> -1 -> 1
+}

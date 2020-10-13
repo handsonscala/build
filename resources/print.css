@@ -1,0 +1,24 @@
+
+.book-page pre code.diff-highlight code.token.inserted-sign.inserted{
+    background-color: rgb(217, 255, 217);
+}
+.book-page pre code.diff-highlight code.token.deleted-sign.deleted{
+    background-color: rgb(255, 217, 217);
+}
+
+html body .book-page code.language-scala { background-color: rgb(235, 235, 235) }
+html body .book-page pre {
+    background-color: rgb(235, 235, 235);
+    white-space: pre-wrap;
+}
+
+html .book-page span.code-snippet-name-tag {
+    position: absolute;
+}
+
+/*.book-page */code.token.string{ color: #390; }
+/*.book-page */span.token.string{ color: #390; }
+
+code[class*=language-], pre[class*=language-]{
+    color: inherit;
+}

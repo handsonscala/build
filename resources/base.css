@@ -1,0 +1,85 @@
+* { /* avoids weirdness when scraping PDF text for validation */
+    font-variant-ligatures: none;
+}
+
+html h1{ font-size: 3rem;}
+html h2{ font-size: 2rem; font-weight: bold; }
+html h3{ font-size: 1.5rem; }
+html h4{ font-size: 1rem; font-weight: bold; }
+html h5{ font-size: 1rem; }
+html h6{ font-size: 1rem; }
+
+html .book-page p{
+    page-break-inside: avoid;
+    text-align: justify;
+}
+html p{
+    line-height: 1.25rem;
+}
+table{
+    page-break-inside: avoid;
+}
+
+html body .book-page{
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    padding: 1px;
+}
+html body .book-page div.code-snippet-number-tag{
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+html .book-page td.lone-child > *{
+    /*top: 5px;*/
+    /*bottom: 5px;*/
+    /*left: 5px;*/
+    /*right: 5px;*/
+    /*position: absolute;*/
+    min-height: 100%;
+}
+html .book-page td > *:last-child{
+    margin-bottom: 0;
+}
+
+div.book-page > *:last-child {
+    margin-bottom: 0;
+}
+
+html body .book-page pre {
+    padding: 1px;
+}
+
+html body .book-page pre code {
+    white-space: pre-wrap;
+}
+
+.book-page pre code.diff-highlight code.token.inserted-sign.inserted{ font-weight:bold;}
+.book-page img{ width: 100%; }
+/* These should apply to all code snippets, not just the chapter previews */
+/*.book-page */code.namespace{opacity: 1;}
+/*.book-page */code.token.builtin{color: black;}
+/*.book-page */code.token.annotation{ color: #444; }
+/*.book-page */code.token.operator{ background-color: transparent; }
+/*.book-page */code.token.class-name{ color: black; }
+/*.book-page */code.token.function{ color: black; }
+/*.book-page */code.token.generics{ color: black; }
+
+html .book-page code{
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    text-shadow: none;
+}
+
+html .book-page span.code-snippet-name-tag{
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    background-color: #888;
+    color: white;
+}
+html .book-page span.code-snippet-number-tag{
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    font-style: italic;
+    color: #888;
+}

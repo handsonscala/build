@@ -1,0 +1,6 @@
+
+html body .book-page code.language-scala { background-color: rgb(240, 240, 240) }
+html body .book-page pre {
+    background-color: rgb(240, 240, 240);
+    white-space: pre-wrap;
+}
